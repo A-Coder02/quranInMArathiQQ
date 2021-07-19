@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="select-wrapper" id="selectWrapper">
+      <div class="select-btn" id="selectBtn" onclick="">Select Please</div>
+      <div class="select-dopwdown-wrapper">
+        <ul type="none" class="select-dropdown-list">
+          <li class="select-dropdown-list-item search-select">
+            <input
+              type="search"
+              name="searchSelect"
+              id=""
+              placeholder="Search Surah"
+            />
+          </li>
+          <li class="select-dropdown-list-item">SELECT 1</li>
+          <li class="select-dropdown-list-item">SELECT 2</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+          <li class="select-dropdown-list-item">SELECT 3</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script defer>
+    let dropButton = document.querySelector("#selectBtn");
+    let dropList = document.querySelector(".select-dopwdown-wrapper");
+    console.log(dropButton, dropList);
+
+    dropButton.addEventListener("click", function () {
+      dropList.style.height = "235px";
+    });
+  </script>
+  <style>
+    *,
+    *::after,
+    *::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      /* font-family: "Courier New", Courier, monospace; */
+      outline: none;
+    }
+
+    body {
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+      /* align-content: center; */
+      height: 100vh;
+    }
+    .select-dopwdown-wrapper {
+      position: relative;
+      height: 0px;
+      /* ffaf */
+      overflow: auto;
+      transition: 1s;
+    }
+    .select-wrapper {
+      text-align: center;
+      margin: 0.3rem;
+      background: #03a9f4;
+      color: white;
+      width: 150px;
+      border-radius: 5px;
+      overflow: hidden;
+      height: fit-content;
+    }
+    .select-btn {
+      background: #2196f3;
+      padding: 0.5rem;
+    }
+    .select-btn::after {
+      padding-left: 0.6rem;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0d7";
+    }
+    .select-dropdown-list {
+    }
+    .select-dropdown-list-item {
+      padding: 0.5rem;
+      border-bottom: 1px #2196f3 solid;
+      width: 100%;
+    }
+    .select-dropdown-list-item input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+    .search-select {
+      padding: 0 !important;
+      position: relative;
+    }
+    .search-select::after {
+      display: grid;
+      place-content: center;
+      background-color: #077cd8;
+      content: "hjk";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: fit-content;
+      height: 100%;
+      padding: 0.6rem;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f002";
+    }
+  </style>
+</html>
